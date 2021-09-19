@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"cdd233.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="MySQL 常用语法记录">
+  <meta name="description" content="MySQL常用语法记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL 常用语法">
+<meta property="og:title" content="MySQL常用语法">
 <meta property="og:url" content="https://cdd233.github.io/Rules/59fbd90c.html">
 <meta property="og:site_name" content="cdd233">
-<meta property="og:description" content="MySQL 常用语法记录">
+<meta property="og:description" content="MySQL常用语法记录">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-04-10T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-02T02:01:37.924Z">
+<meta property="article:modified_time" content="2021-09-19T18:36:51.065Z">
 <meta property="article:author" content="Tromixfuc">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
@@ -61,7 +61,7 @@
         }
     })();
 </script>
-  <title>MySQL 常用语法 | cdd233</title>
+  <title>MySQL常用语法 | cdd233</title>
   
 
 
@@ -227,7 +227,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          MySQL 常用语法
+          MySQL常用语法
         </h1>
 
         <div class="post-meta">
@@ -244,7 +244,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-02 10:01:37" itemprop="dateModified" datetime="2021-04-02T10:01:37+08:00">2021-04-02</time>
+                <time title="修改时间：2021-09-20 02:36:51" itemprop="dateModified" datetime="2021-09-20T02:36:51+08:00">2021-09-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -257,14 +257,14 @@
             </span>
 
           
-            <span id="/Rules/59fbd90c.html" class="post-meta-item leancloud_visitors" data-flag-title="MySQL 常用语法" title="阅读次数">
+            <span id="/Rules/59fbd90c.html" class="post-meta-item leancloud_visitors" data-flag-title="MySQL常用语法" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
               <span class="post-meta-item-text">阅读次数：</span>
               <span class="leancloud-visitors-count"></span>
             </span>
-            <div class="post-description">MySQL 常用语法记录</div>
+            <div class="post-description">MySQL常用语法记录</div>
 
         </div>
       </header>
@@ -277,6 +277,7 @@
       
         <p>DDL：Data Definition Language     数据定义语言<br>DML：Data Manipulation Language    数据操纵语言</p>
 <hr>
+<p><br><br></p>
 <h2 id="约束条件"><a href="#约束条件" class="headerlink" title="约束条件"></a>约束条件</h2><table>
 <thead>
 <tr>
@@ -317,6 +318,7 @@
 <td align="center">tb_id INT REFERENCES tb_2(id);</td>
 </tr>
 </tbody></table>
+<p><br><br></p>
 <h2 id="联合约束"><a href="#联合约束" class="headerlink" title="联合约束"></a>联合约束</h2><ul>
 <li>联合唯一</li>
 </ul>
@@ -326,10 +328,7 @@
 <li>联合主键</li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">PRIMARY</span> KEY(name, id);			# 以 name 和 id 作为一个整体，再约束其整体为主键</span><br></pre></td></tr></table></figure>
-
-
-
-
+<p><br><br></p>
 <h2 id="ALTER"><a href="#ALTER" class="headerlink" title="ALTER"></a>ALTER</h2><ul>
 <li>增加主键</li>
 </ul>
@@ -389,58 +388,44 @@
 <li>删除索引</li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tb_1 <span class="keyword">DROP</span> INDEX index_name;</span><br></pre></td></tr></table></figure>
-
-
-
+<p><br><br></p>
 <h2 id="约束相关的数据字典"><a href="#约束相关的数据字典" class="headerlink" title="约束相关的数据字典"></a>约束相关的数据字典</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> user_constraints <span class="keyword">WHERE</span> table_name <span class="operator">=</span> <span class="string">&#x27;TEST&#x27;</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> user_cons_columns <span class="keyword">WHERE</span> table_name <span class="operator">=</span> <span class="string">&#x27;TEST&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>a.　<code>DELETE</code>　　　–DML　配合 <code>where</code> 条件约束删除数据，可以 <code>ROLLBACK</code>   ，保留表结构，速度最慢<br>b.　<code>TRUNCATE</code>　　–DDL　<code>TRUNCATE</code> 是截断表的所有数据(格式化表)，不能 <code>ROLLBACK</code> ，保留表结构，速度较快<br>c.　<code>DROP</code>　　　　–DDL　删除表结构及表的所有数据，不能 <code>ROLLBACK</code> ，不保留表结构，速度最快</p>
+<p><br><br></p>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>a.　<code>DELETE</code>　　　–DML　配合 <code>where</code> 条件约束删除数据，可以 <code>ROLLBACK</code>   ，保留表结构，速度最慢<br>b.　<code>TRUNCATE</code>　　–DDL　<code>TRUNCATE</code> 是截断表的所有数据(格式化表)，不能 <code>ROLLBACK</code> ，保留表结构，速度较快<br>c.　<code>DROP</code>　　　　–DDL　删除表结构及表的所有数据，不能 <code>ROLLBACK</code> ，不保留表结构，速度最快<br><br><br></p>
 <h2 id="DISTUNCT"><a href="#DISTUNCT" class="headerlink" title="DISTUNCT"></a>DISTUNCT</h2><p>　　-　从返回的结果集中去除重复项</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DISTUNCT name <span class="keyword">FROM</span> tb_1;			# 去除 name 的重复项再展示查询结果</span><br><span class="line"><span class="keyword">SELECT</span> DISTUNCT name, sex <span class="keyword">FROM</span> tb_1;		# 去除 name 和 sex 作为一个整体的重复项再展示查询结果</span><br></pre></td></tr></table></figure>
-
-
+<p><br><br></p>
 <h2 id="BETWEEN-AND"><a href="#BETWEEN-AND" class="headerlink" title="BETWEEN .. AND .."></a>BETWEEN .. AND ..</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> tb_1 <span class="keyword">WHERE</span> num <span class="keyword">BETWEEN</span> <span class="number">800</span> <span class="keyword">AND</span> <span class="number">1600</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> tb_1 <span class="keyword">WHERE</span> num <span class="operator">&gt;=</span> <span class="number">800</span> <span class="keyword">AND</span> num <span class="operator">&lt;=</span> <span class="number">1600</span>;</span><br></pre></td></tr></table></figure>
-
-
+<p><br><br></p>
 <h2 id="IN"><a href="#IN" class="headerlink" title="IN"></a>IN</h2><p>　　-　在列出的值中使用</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> tb_1 <span class="keyword">WHERE</span> num <span class="operator">=</span> <span class="number">30</span> <span class="keyword">OR</span> num <span class="operator">=</span> <span class="number">40</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> tb_1 <span class="keyword">WHERE</span> num <span class="keyword">IN</span> (<span class="number">30</span>,<span class="number">40</span>);</span><br></pre></td></tr></table></figure>
-
-
+<p><br><br></p>
 <h2 id="LIKE"><a href="#LIKE" class="headerlink" title="LIKE"></a>LIKE</h2><p>　　-　模糊查询　　<code>%</code> (适配全部字符)　　<code>_</code> (适配单个字符)</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> tb_1 <span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="string">&#x27;_A%&#x27;</span>;		# 查询 tb_1 表中 name 第二个字符为 A 的所有信息</span><br></pre></td></tr></table></figure>
-
-
+<p><br><br></p>
 <h2 id="IS-NULL"><a href="#IS-NULL" class="headerlink" title="IS NULL"></a>IS NULL</h2><p>　　-　查询空值</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> tb_1 <span class="keyword">WHERE</span> NAME <span class="keyword">IS</span> <span class="keyword">NULL</span>;		# 查询 tb_1 表中 name 为空值的所有信息</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> tb_1 <span class="keyword">WHERE</span> NAME <span class="operator">=</span> <span class="string">&#x27;&#x27;</span>;		# 这种写法是错误的</span><br></pre></td></tr></table></figure>
-
-
+<p><br><br></p>
 <h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">NOT</span> <span class="operator">&gt;</span> <span class="keyword">AND</span> <span class="operator">&gt;</span> <span class="keyword">OR</span></span><br></pre></td></tr></table></figure>
-
-
+<p><br><br></p>
 <h2 id="ORDER-BY子句"><a href="#ORDER-BY子句" class="headerlink" title="ORDER BY子句"></a>ORDER BY子句</h2><p>　　-　结果排序　ASC表示升序　DESC表示降序　默认为升序</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> tb_1 <span class="keyword">ORDER</span> <span class="keyword">BY</span> num <span class="keyword">DESC</span>;		# 查询 tb_1 表中的所有信息，并按照 num 的降序将结果展示出来</span><br></pre></td></tr></table></figure>
-
-
-
+<p><br><br></p>
 <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>　　-　聚合函数都会忽略NULL值</p>
 <ul>
 <li>COUNT( )　　　-　统计行数</li>
 <li>SUM( ) 　　　　-　求和</li>
 <li>AVG( )　 　　 　-　平均值</li>
 <li>MAX( )　　　 　-　最大值</li>
-<li>MIN( )　 　　 　-　最小值</li>
+<li>MIN( )　 　　 　-　最小值<br><br><br></li>
 </ul>
 <h2 id="GROUP-BY-分组"><a href="#GROUP-BY-分组" class="headerlink" title="GROUP BY  分组"></a>GROUP BY  分组</h2><p>　　-　其真正的作用在于与各种组函数结合使用，用来对查询出来的数据进行分组</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> deptno, <span class="built_in">COUNT</span>(<span class="operator">*</span>), <span class="built_in">SUM</span>(num), <span class="built_in">AVG</span>(num), <span class="built_in">MAX</span>(num), MIX(num) <span class="keyword">FROM</span> tb_1 <span class="keyword">GROUP</span> <span class="keyword">BY</span> deptno;		# 分组显示 deptno 中 num 的总数、总和、平均值、最大值和最小值</span><br></pre></td></tr></table></figure>
-
-
+<p><br><br></p>
 <h2 id="HAVING子句"><a href="#HAVING子句" class="headerlink" title="HAVING子句"></a>HAVING子句</h2><p>　　-　WHERE 搜索条件在进行分组操作之前应用；而 HAVING 搜索条件在进行分组操作之后应用。<br>　　-　HAVING 语法与 WHERE 语法类似，但 HAVING 可以包含聚合函数。<br>　　-　HAVING 子句可以引用选择列表中显示的任意项。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> deptno,<span class="built_in">COUNT</span>(<span class="operator">*</span>),<span class="built_in">SUM</span>(sal),<span class="built_in">AVG</span>(sal),<span class="built_in">MAX</span>(sal),<span class="built_in">MIN</span>(sal) <span class="keyword">FROM</span> scott.emp <span class="keyword">GROUP</span> <span class="keyword">BY</span> deptno <span class="keyword">HAVING</span> <span class="built_in">SUM</span>(sal) <span class="operator">&gt;</span> <span class="number">9000</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="built_in">SUM</span>(sal) <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="ROWNUM"><a href="#ROWNUM" class="headerlink" title="ROWNUM"></a>ROWNUM</h2><p>　　-　虚假的列(伪列)，因为 <code>ROWNUM</code> 都是从1开始,但是1以上的自然数在 <code>ROWNUM</code> 做等于判断是时认为都是 <code>false</code> 条件，即必须有前一个才会有后一个。</p>
+<p><br><br></p>
+<h2 id="ROWNUM"><a href="#ROWNUM" class="headerlink" title="ROWNUM"></a>ROWNUM</h2><p>　　-　虚假的列(伪列)，因为 <code>ROWNUM</code> 都是从1开始,但是1以上的自然数在 <code>ROWNUM</code> 做等于判断是时认为都是 <code>false</code> 条件，即必须有前一个才会有后一个。<br><br><br></p>
 <h2 id="INDEX-索引"><a href="#INDEX-索引" class="headerlink" title="INDEX　索引"></a>INDEX　索引</h2><p>　　-　在数据库中用来加速对表的查询，通过使用快速路径访问方法快速定位数据，减少了磁盘的 <code>I/O</code></p>
 <ul>
 <li>特点<ul>
@@ -450,7 +435,7 @@
 </li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX index_name <span class="keyword">ON</span> tb_1(name);		# 给表 tb_1 中的字段 name 创建一个索引名为 index_name 的索引</span><br></pre></td></tr></table></figure>
-
+<p><br><br></p>
 <h2 id="SEQUENCE-序列"><a href="#SEQUENCE-序列" class="headerlink" title="SEQUENCE　序列"></a>SEQUENCE　序列</h2><blockquote>
 <p>eg：</p>
 </blockquote>
@@ -460,7 +445,7 @@
 <ul>
 <li>序列的两个重要属性：<code>currval</code> 当前值，<code>nextval</code> 当前值增加一次后的值<ul>
 <li>seq_name.currval　　　　　　1</li>
-<li>seq_name.nextval　　　　　　6</li>
+<li>seq_name.nextval　　　　　　6<br><br><br></li>
 </ul>
 </li>
 </ul>
@@ -479,6 +464,7 @@
 <li>删除：</li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">VIEW</span> v_info;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -508,7 +494,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://cdd233.github.io/Rules/59fbd90c.html" title="MySQL 常用语法">https://cdd233.github.io/Rules/59fbd90c.html</a>
+    <a href="https://cdd233.github.io/Rules/59fbd90c.html" title="MySQL常用语法">https://cdd233.github.io/Rules/59fbd90c.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -528,8 +514,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/Rules/e317821c.html" rel="prev" title="Markdown 常用语法">
-      <i class="fa fa-chevron-left"></i> Markdown 常用语法
+    <a href="/Rules/e317821c.html" rel="prev" title="Markdown常用语法">
+      <i class="fa fa-chevron-left"></i> Markdown常用语法
     </a></div>
       <div class="post-nav-item">
     <a href="/Porse/960f91b8.html" rel="next" title="「Private」About My Dream">
@@ -625,7 +611,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
